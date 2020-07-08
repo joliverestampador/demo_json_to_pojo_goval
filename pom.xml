@@ -63,12 +63,21 @@
             <plugin>
                 <groupId>org.jsonschema2pojo</groupId>
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+<!--                <version>0.4.4</version>-->
                 <version>1.0.2</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.demo</groupId>
+                        <artifactId>json</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
                 <configuration>
                     <sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
                     <!-- update this -->
                     <targetPackage>com.demo.json</targetPackage>
                     <sourceType>json</sourceType>
+                    <customAnnotator>com.demo.json.CustomAnnotator</customAnnotator>
                 </configuration>
                 <executions>
                     <execution>

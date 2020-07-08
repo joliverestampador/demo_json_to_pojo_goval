@@ -4,16 +4,18 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.sun.codemodel.JDefinedClass;
 import com.sun.codemodel.JFieldVar;
 import org.jsonschema2pojo.AbstractAnnotator;
-import lombok.Builder;
 
 public class CustomAnnotator extends AbstractAnnotator {
     @Override
-    public void propertyField(JFieldVar field, JDefinedClass jDefinedClass, String propertyName, JsonNode propertyNode) {
-        super.propertyField(field, jDefinedClass, propertyName, propertyNode);
+    public void propertyField(JFieldVar field, JDefinedClass clazz, String propertyName, JsonNode propertyNode) {
+        super.propertyField(field, clazz, propertyName, propertyNode);
 
         // Note: does not have to be the propertyName, could be the field or propertyNode that is verified.
-        if (propertyName.equals("Person")) {
-            jDefinedClass.annotate(Builder.class);
+        if (propertyName.equals("entity")) {
+            field.annotate(Override.class);
         }
+//        System.out.println("YEAH");
     }
+
+
 }
