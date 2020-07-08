@@ -71,6 +71,11 @@
                         <artifactId>json</artifactId>
                         <version>1.0-SNAPSHOT</version>
                     </dependency>
+                    <dependency>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                        <version>1.16.16</version>
+                    </dependency>
                 </dependencies>
                 <configuration>
                     <sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
@@ -78,6 +83,11 @@
                     <targetPackage>com.demo.json</targetPackage>
                     <sourceType>json</sourceType>
                     <customAnnotator>com.demo.json.CustomAnnotator</customAnnotator>
+                    <includeGetters>false</includeGetters>
+                    <includeSetters>false</includeSetters>
+                    <includeAdditionalProperties>false</includeAdditionalProperties>
+                    <includeToString>false</includeToString>
+                    <includeHashcodeAndEquals>false</includeHashcodeAndEquals>
                 </configuration>
                 <executions>
                     <execution>

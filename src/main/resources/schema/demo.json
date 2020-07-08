@@ -1,10 +1,42 @@
 {
-  "title": "Person",
-  "type": "object",
-  "properties": {
-    "entity": true,
-    "name": {
-      "type": "string"
+  "RealEstateValuation": {
+      "additionalItems": false,
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "@AVMReferenceID": { "$ref": "#/definitions/stringType" },
+          "@ConfidenceLevel": { "$ref": "#/definitions/decimalType" },
+          "@DocumentsToSightComment": { "$ref": "#/definitions/stringType" },
+          "@ExpiryDate": { "$ref": "#/definitions/dateType" },
+          "@ImprovementsValue": { "$ref": "#/definitions/currencyType" },
+          "@InstructorComment": { "$ref": "#/definitions/stringType" },
+          "@InstructorToSight": { "$ref": "#/definitions/yesNoList" },
+          "@IssueDate": { "$ref": "#/definitions/dateType" },
+          "@LandValue": { "$ref": "#/definitions/currencyType" },
+          "@Marketability": { "$ref": "#/definitions/ratingList" },
+          "@OtherValue": { "$ref": "#/definitions/currencyType" },
+          "@RecommendSecurity": { "$ref": "#/definitions/yesNoList" },
+          "@RequestedPriority": { "$ref": "#/definitions/realEstateRequestedPriorityList" },
+          "@SaleInLineWithLocalMarket": { "$ref": "#/definitions/yesNoList" },
+          "@SaleInLineWithLocalMarketComment": { "$ref": "#/definitions/stringType" },
+          "@TotalValuedAmount": { "$ref": "#/definitions/currencyType" },
+          "@TwoTieredMarketing": { "$ref": "#/definitions/yesNoList" },
+          "@UniqueID": { "$ref": "#/definitions/uniqueIDType" },
+          "@ValuationMethodology": { "$ref": "#/definitions/estimateMethodologyList" },
+          "@ValuationReason": { "$ref": "#/definitions/realEstateValuationReasonList" },
+          "@ValuationReasonDescription": { "$ref": "#/definitions/stringType" },
+          "@ValuationType": { "$ref": "#/definitions/realEstateValuationTypeList" },
+          "@ValuedDate": { "$ref": "#/definitions/dateType" },
+          "@ValueRangeMaximum": { "$ref": "#/definitions/currencyType" },
+          "@ValueRangeMinimum": { "$ref": "#/definitions/currencyType" },
+          "@ValuerAssignedID": { "$ref": "#/definitions/stringType" },
+          "@ValuerComment": { "$ref": "#/definitions/stringType" },
+          "@x_Asset": { "$ref": "#/definitions/referenceType" }
+        },
+        "type": "object"
+      },
+      "minItems": 0,
+      "type": "array"
     }
-  }
+
 }
